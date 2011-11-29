@@ -2,12 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <!-- iPad/iPhone specific css below, add after your main css >
+  	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+  	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+  	-->
     <link rel="stylesheet" href="build/web/css/main.css" type="text/css" media="screen">
     <script src="build/web/js/app.js"></script>
     <script>require('main');</script>
+    <script type="text/javascript" charset="utf-8">
+      function onBodyLoad()
+    	{		
+    		document.addEventListener("deviceready", onDeviceReady, false);
+    	}
+    	function onDeviceReady()
+    	{
+    		// do your thing!
+    		navigator.notification.alert("PhoneGap is working")
+    	}
+    </script>
   </head>
-  <body>
+  <body onload="onBodyLoad()">
     <div id="home-view"></div>
   </body>
 </html>
