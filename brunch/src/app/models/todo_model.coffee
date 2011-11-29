@@ -11,5 +11,5 @@ class exports.Todo extends Backbone.Model
     @destroy()
     @view.remove()
   
-  urlRoot: 'http://localhost:3000/items/'
+  urlRoot: 'http://localhost:3000/todos/'
   

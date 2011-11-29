@@ -3,7 +3,7 @@ Todo = require('models/todo_model').Todo
 class exports.Todos extends Backbone.Collection
 
   model: Todo
-  url: 'http://localhost:3000/items'
+  url: 'http://localhost:3000/todos'
 
   initialize: ->
     #@localStorage = new Store "todos"
